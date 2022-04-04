@@ -19,4 +19,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+Route::middleware(['auth','isAdmin'])->group(function(){
+    Route::get('dashboard',function(){
+        return "you are admin";
+    });
+});
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
