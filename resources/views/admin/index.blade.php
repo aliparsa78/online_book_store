@@ -18,22 +18,33 @@
         <div class="row p-5">
             <div class="col-md-3 ">
                 <div class="admin-dashboard">
-                    <a href="">Dashboard</a>
+                    <div class="header">
+                        <a href="">Dashboard</a>
+                    </div><hr>
+                    
                     <ul>
                         <li>
                             <div class="dropdown">
-                            <a type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                Books <i class="fa fa-book"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Link 1</a>
-                                <a class="dropdown-item" href="#">Link 2</a>
-                                <a class="dropdown-item" href="#">Link 3</a>
-                            </div>
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Books <i class="fa fa-book"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Add Catagory</a>
+                                    <a class="dropdown-item" href="#">See</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
                             </div>
                         </li>
                         <li>
-                            <a href="">Catagories</a>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Catagories <i class="fa fa-book"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="{{url('add-catagory')}}">Add Catagory</a>
+                                    <a class="dropdown-item" href="#">See Catagory</a>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>

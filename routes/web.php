@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::middleware(['auth','isAdmin'])->group(function(){
     Route::get('dashboard',function(){
         return view('admin.index');
     });
+    Route::get('/add-catagory',[AdminController::class,'add_catagory']);
 });
 
 
