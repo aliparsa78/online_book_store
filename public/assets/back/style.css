@@ -11,3 +11,19 @@ footer{
     padding: 10px 0;
     color: aliceblue;
 }
+.admin-dashboard{
+    width: 80%;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.admin-dashboard ul li{
+    list-style-type: none;
+    width: 80%;
+    
+    
+}
+.dropdown-menu{
+    width: 60%;
+    margin-left: -40px;
+}
