@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Book Store</title>
-    @yield('title')
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/back/style.css">
+    @extends('layouts.backend.main')
+    
+    @section('title')
+        Online Book Store1
+    @endsection
+    
 </head>
 <body>
-@include('../layouts/backend/header')
+    @section('content')
         <div class="row p-5">
             <div class="col-md-3 ">
                 <div class="admin-dashboard">
@@ -75,7 +73,7 @@
                 </div>
             </div>
         </div>
-@include('../layouts/backend/footer') 
+    @endsection
 </body>
 </html>
 
