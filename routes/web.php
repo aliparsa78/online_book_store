@@ -22,7 +22,7 @@ Auth::routes();
 
 Route::middleware(['auth','isAdmin'])->group(function(){
     Route::get('dashboard',function(){
-        return "you are admin";
+        return view('admin.index');
     });
 });
 
