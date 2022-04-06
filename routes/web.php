@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CatagoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,9 @@ Route::middleware(['auth','isAdmin'])->group(function(){
     Route::get('dashboard',function(){
         return view('admin.index');
     });
-    Route::get('/add-catagory',[AdminController::class,'add_catagory']);
+    Route::get('/catagory',[CatagoryController::class,'index']);
+    Route::get('/add-catagory',[CatagoryController::class,'add_catagory']);
+    Route::post('/add-catagory',[CatagoryController::class,'insert_catagory']);
 });
 
 

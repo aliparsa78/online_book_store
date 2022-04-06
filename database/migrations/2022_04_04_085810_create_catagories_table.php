@@ -20,7 +20,6 @@ class CreateCatagoriesTable extends Migration
             $table->string('discription');
             $table->char('status');
             $table->string('popular');
-            $table->timestamps();
         });
     }
 

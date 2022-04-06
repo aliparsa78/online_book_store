@@ -12,7 +12,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <div class="row">
       <div class="col-md-10">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav p-2">
           <li class="nav-item">
             <a class="nav-link" href="#">Books</a>
           </li>

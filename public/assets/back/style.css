@@ -1,5 +1,5 @@
 .navbar{
-    height: auto;
+    
     border-radius: 3px;
     padding: 0 50px;
 }
@@ -11,6 +11,7 @@ footer{
     padding: 10px 0;
     color: aliceblue;
 }
+
 .admin-dashboard{
     width: 80%;
     text-align: center;
@@ -59,11 +60,10 @@ footer{
 .insert-catagory input:hover{
     border-bottom: outset;
 }
-#navbar-auth{
-    display: inline;
-    float: right;
-    color: blanchedalmond;
+.dropdown-toggle{
+    color: aliceblue;
+    list-style-type: none;
 }
-#navbar-auth a{
-    color: gray;
+#navbar-auth{
+    list-style-type: none;
 }

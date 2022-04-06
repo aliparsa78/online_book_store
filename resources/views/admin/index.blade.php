@@ -27,6 +27,7 @@
                                     Books <i class="fa fa-book"></i>
                                 </button>
                                 <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Catagory</a>
                                     <a class="dropdown-item" href="#">Add Catagory</a>
                                     <a class="dropdown-item" href="#">See</a>
                                     <a class="dropdown-item" href="#">Link 3</a>
@@ -39,6 +40,7 @@
                                     Catagories <i class="fa fa-book"></i>
                                 </button>
                                 <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="{{url('catagory')}}"> Catagory</a>
                                     <a class="dropdown-item" href="{{url('add-catagory')}}">Add Catagory</a>
                                     <a class="dropdown-item" href="#">See Catagory</a>
                                 </div>

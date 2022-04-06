@@ -8,7 +8,5 @@ use Moles;
 
 class AdminController extends Controller
 {
-    function add_catagory(){
-        return view('Admin.catagory.index');
-    }
+    
 }
