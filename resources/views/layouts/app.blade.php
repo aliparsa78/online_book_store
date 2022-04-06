@@ -8,13 +8,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <!-- Scripts -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    
     
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <!-- Styles -->
 </head>
 <body>
@@ -77,5 +76,8 @@
             @yield('content')
         </main>
     </div>
+
 </body>
+<!-- Scripts -->
+<script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script>
 </html>

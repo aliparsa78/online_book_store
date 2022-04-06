@@ -49,3 +49,21 @@ footer{
     background-color:lightgray;
     
 }
+.insert-catagory input{
+    border: none;
+    border-bottom: solid gray 1px;
+}
+.insert-catagory .radio{
+    
+}
+.insert-catagory input:hover{
+    border-bottom: outset;
+}
+#navbar-auth{
+    display: inline;
+    float: right;
+    color: blanchedalmond;
+}
+#navbar-auth a{
+    color: gray;
+}
