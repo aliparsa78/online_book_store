@@ -9,8 +9,9 @@ use App\Models\Catagory;
 class CatagoryController extends Controller
 {
     function index(){
+        $catagory = Catagory::all();
 
-        return view('Admin.catagory.index');
+        return view('Admin.catagory.index',compact('catagory'));
     }
     function add_catagory(){
         return view('Admin.catagory.add-catagory');

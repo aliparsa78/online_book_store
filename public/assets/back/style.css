@@ -67,3 +67,10 @@ footer{
 #navbar-auth{
     list-style-type: none;
 }
+
+
+#catagory{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 4%;
+}
