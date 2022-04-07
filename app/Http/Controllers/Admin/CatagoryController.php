@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Auth;
 use File;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -61,6 +62,20 @@ class CatagoryController extends Controller
             }
             $catagory->update();
             return redirect('catagories')->with('status','Catagory Update Successfuly!');
+        }
+    }
+
+    function delete_catagory(Request $req,$id){
+        if(Auth::check()){
+        $catagory = Catagory::find($id);
+        if($catagory->image){
+            $path ="category/".$catagory->image;
+            if(File::exists($path)){
+                File::delete($path);
+            }
+        }
+        $catagory->delete();
+        return redirect('catagories')->with('status','Catagory Deleted Successfuly');
         }
     }
 }
