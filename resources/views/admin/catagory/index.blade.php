@@ -11,7 +11,7 @@
                     <h4>Catagory Table Content</h4>
                 </div>
                 <div class="card-body">
-                    <table class="table table-bordered table-hover p-5">
+                    <table class="table table-bordered table-responsive table-hover p-5">
                     <thead>
                     <tr>
                         <th>ID</th>
@@ -20,13 +20,16 @@
                         <th>Image</th>
                         <th>Featured</th>
                         <th>Active</th>
-                        <th>Action</th>
+                        <th>Update</th>
+                        <th>Delete</th>
                     </tr>
                     </thead>
                     <tbody>
+                    @php $idNumber=1   @endphp
                         @foreach($catagory as $item)
+                        
                         <tr>
-                            <td>{{$item->id}}</td>
+                            <td>{{$idNumber++}}</td>
                             <td>{{$item->name}}</td>
                             <td>{{$item->description}}</td>
                             <td>
@@ -35,8 +38,10 @@
                             <td>{{$item->featured}}</td>
                             <td>{{$item->active}}</td>
                             <td>
-                                <a href="{{url('edite-catagory/'.$item->id)}}" class="btn btn-info">Update</a>
-                                <a href="{{url('delete-catagory/'.$item->id)}}" class="btn btn-danger">Remove</a>
+                                <a href="{{url('edite-catagory/'.$item->id)}}" class="btn btn-info fa fa-edit">Update</a>
+                            </td>
+                            <td>
+                            <a href="{{url('delete-catagory/'.$item->id)}}" class="btn btn-danger fa fa-remove">Remove</a>
                             </td>
                         </tr>
                         @endforeach

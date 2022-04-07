@@ -34,7 +34,7 @@ class CatagoryController extends Controller
             $catagory->image=$filename;
           }
           $catagory->save();
-        return redirect('catagories')->with('status','Catagory Added Successfuly');
+        return redirect('/')->with('status','Catagory Added Successfuly');
     }
     function edite_catagory($id){
         $catagory = Catagory::find($id);
