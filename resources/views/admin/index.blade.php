@@ -7,7 +7,7 @@
     @extends('layouts.backend.main')
     
     @section('title')
-        Online Book Store1
+        Online Book Store
     @endsection
     
 </head>
@@ -40,9 +40,8 @@
                                     Catagories <i class="fa fa-book"></i>
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{url('catagory')}}"> Catagory</a>
+                                    <a class="dropdown-item" href="{{url('catagories')}}"> Catagory</a>
                                     <a class="dropdown-item" href="{{url('add-catagory')}}">Add Catagory</a>
-                                    <a class="dropdown-item" href="#">See Catagory</a>
                                 </div>
                             </div>
                         </li>

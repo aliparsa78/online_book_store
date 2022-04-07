@@ -23,12 +23,14 @@ Auth::routes();
 
 
 Route::middleware(['auth','isAdmin'])->group(function(){
-    Route::get('dashboard',function(){
-        return view('admin.index');
-    });
-    Route::get('/catagory',[CatagoryController::class,'index']);
+    // Main page of admin part
+    Route::get('/',[AdminController::class,'index']);
+    //Catagory Part 
+    Route::get('catagories',[CatagoryController::class,'index']);
     Route::get('/add-catagory',[CatagoryController::class,'add_catagory']);
     Route::post('/add-catagory',[CatagoryController::class,'insert_catagory']);
+    Route::get('/edite-catagory/{id}',[CatagoryController::class,'edite_catagory']);
+    Route::post('/update-catagory/{id}',[CatagoryController::class,'update_catagory']);
 });
 
 

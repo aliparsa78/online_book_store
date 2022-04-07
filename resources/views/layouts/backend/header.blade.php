@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-expand-md bg-info navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">Online Book Store</a>
+  <a class="navbar-brand" href="/">Online Book Store</a>
     
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
