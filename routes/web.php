@@ -34,7 +34,7 @@ Route::middleware(['auth','isAdmin'])->group(function(){
     Route::post('/update-catagory/{id}',[CatagoryController::class,'update_catagory']);
     Route::get('/delete-catagory/{id}',[CatagoryController::class,'delete_catagory']);
     // Books Route
-    Route::get('/books',[BooksController::class,'index']);
+    Route::get('/book',[BooksController::class,'index']);
     Route::get('/add-book',[BooksController::class,'add_book']);
     Route::post('/add-book',[BooksController::class,'insert']);
 });

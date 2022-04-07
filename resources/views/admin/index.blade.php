@@ -27,7 +27,7 @@
                                     Books <i class="fa fa-book"></i>
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{url('books')}}">Books</a>
+                                    <a class="dropdown-item" href="{{url('book')}}">Books</a>
                                     <a class="dropdown-item" href="{{url('add-book')}}">Add Books</a>
                                 </div>
                             </div>

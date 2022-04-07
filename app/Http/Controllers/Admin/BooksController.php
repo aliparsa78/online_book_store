@@ -11,7 +11,8 @@ use Auth;
 class BooksController extends Controller
 {
     function index(){
-        return view('Admin.Books.index');
+        $book = Books::all();
+        return view('Admin.Books.index',compact('book'));
     }
 
     function add_book(){
