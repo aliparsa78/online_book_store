@@ -3,6 +3,13 @@
     border-radius: 3px;
     padding: 0 50px;
 }
+.navbar a{
+    font-weight: bold;
+}
+#navbar ul li a{
+    color: aliceblue;
+    font-weight: bold;
+}
 footer{
     height: 60px;
     background-color: red;

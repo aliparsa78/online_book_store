@@ -11,19 +11,19 @@
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <div class="row">
-      <div class="col-md-10">
+      <div class="col-md-10" id="navbar">
         <ul class="navbar-nav p-2">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Books</a>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url('user')}}">Users</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Catagories</a>
+            <a class="nav-link" href="{{url('book')}}">Books</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Catagories</a>
+            <a class="nav-link" href="{{url('catagories')}}">Catagories</a>
           </li>
           <li class="nav-item" style="margin-right:700px">
-            <a class="nav-link" href="#">Latest</a>
+            <a class="nav-link" href="#">Orders</a>
           </li>
         </ul>
       </div>

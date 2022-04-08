@@ -1,6 +1,6 @@
 @extends('layouts/backend/main')
 @section('title')
-    Catagory
+    Users
 @endsection
 
 @section('content')
@@ -15,28 +15,23 @@
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Tile</th>
-                        <th>Description</th>
-                        <th>Image</th>
-                        <th>Featured</th>
-                        <th>Active</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role_as</th>
                         <th>Update</th>
                         <th>Delete</th>
                     </tr>
                     </thead>
                     <tbody>
                     @php $idNumber=1   @endphp
-                        @foreach($catagory as $item)
+                        @foreach($user as $item)
                         
                         <tr>
                             <td>{{$idNumber++}}</td>
                             <td>{{$item->name}}</td>
-                            <td>{{$item->description}}</td>
-                            <td>
-                                <img src="{{asset('category/'.$item->image)}}" width="100px" height="80px" alt="">
-                            </td>
-                            <td>{{$item->featured}}</td>
-                            <td>{{$item->active}}</td>
+                            <td>{{$item->email}}</td>
+                            <td><?php if($item->role_as== 1 ){echo "admin";}else{echo "user";} ?></td>
+                            
                             <td>
                                 <a href="{{url('edite-catagory/'.$item->id)}}" class="btn btn-info fa fa-edit">Update</a>
                             </td>

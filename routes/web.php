@@ -25,7 +25,9 @@ Auth::routes();
 
 Route::middleware(['auth','isAdmin'])->group(function(){
     // Main page of admin part
+    Route::get('/user',[AdminController::class,'index']);
     Route::get('/',[AdminController::class,'index']);
+
     //Catagory Part 
     Route::get('catagories',[CatagoryController::class,'index']);
     Route::get('/add-catagory',[CatagoryController::class,'add_catagory']);

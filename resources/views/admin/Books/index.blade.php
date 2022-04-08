@@ -42,7 +42,7 @@
                             <td>{{$item->writer}}</td>
                             <td>{{$item->description}}</td>
                             <td>
-                                <img src="{{asset('Books/'.$item->image)}}"  width="170px" height="80px" alt="">
+                                <img src="{{asset('Books/'.$item->image)}}"  width="170px" height="100px" alt="">
                             </td>
                             
                             <td>
