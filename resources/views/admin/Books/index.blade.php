@@ -8,18 +8,26 @@
         <div class="main p-5">
             <div class="card shadow">
                 <div class="card-header">
-                    <h4>Catagory Table Content</h4>
+                    <h4 class="text-center">Books Table</h4>
                 </div>
                 <div class="card-body">
+                    <p class="display-inline">
+                     <a href="{{url('add-book')}}" class="btn btn-info float-right mb-4">Add Book</a>
+                    </p>
                     <table class="table table-bordered table-responsive table-hover p-5">
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Tile</th>
+                        <th>Name</th>
+                        <th>Writer</th>
                         <th>Description</th>
                         <th>Image</th>
-                        <th>Featured</th>
-                        <th>Active</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                        <th>OriginalPrice</th>
+                        <th>SellingPrice</th>
+                        <th>Tax</th>
                         <th>Update</th>
                         <th>Delete</th>
                     </tr>
@@ -31,17 +39,26 @@
                         <tr>
                             <td>{{$idNumber++}}</td>
                             <td>{{$item->name}}</td>
+                            <td>{{$item->writer}}</td>
                             <td>{{$item->description}}</td>
                             <td>
-                                <img src="{{asset('Books/'.$item->image)}}" width="100px" height="80px" alt="">
+                                <img src="{{asset('Books/'.$item->image)}}"  width="170px" height="80px" alt="">
                             </td>
-                            <td>{{$item->featured}}</td>
-                            <td>{{$item->active}}</td>
+                            
                             <td>
-                                <a href="{{url('edite-catagory/'.$item->id)}}" class="btn btn-info fa fa-edit">Update</a>
+                               {{$item->catagory->name}}
+                            </td>
+                            <td>{{$item->qty}}</td>
+                            <td>{{$item->status}}</td>
+                            <td>{{$item->original_price}}$</td>
+                            <td>{{$item->selling_price}}$</td>
+                            <td>{{$item->tax}}$</td>
+                            
+                            <td>
+                                <a href="{{url('edite-book/'.$item->id)}}" class="btn btn-info fa fa-edit">Update</a>
                             </td>
                             <td>
-                            <a href="{{url('delete-catagory/'.$item->id)}}" class="btn btn-danger fa fa-remove">Remove</a>
+                            <a href="{{url('delete-book/'.$item->id)}}" class="btn btn-danger fa fa-remove">Remove</a>
                             </td>
                         </tr>
                         @endforeach

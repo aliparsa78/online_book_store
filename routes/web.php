@@ -37,6 +37,8 @@ Route::middleware(['auth','isAdmin'])->group(function(){
     Route::get('/book',[BooksController::class,'index']);
     Route::get('/add-book',[BooksController::class,'add_book']);
     Route::post('/add-book',[BooksController::class,'insert']);
+    Route::get('/edite-book/{id}',[BooksController::class,'edite']);
+    Route::post('/edite-book/{id}',[BooksController::class,'update']);
 });
 
 

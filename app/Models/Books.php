@@ -9,4 +9,7 @@ class Books extends Model
 {
     use HasFactory;
     protected $table = "books";
+    public function catagory(){
+        return $this->belongsTo(Catagory::class,'catagory_id','id');
+    }
 }
