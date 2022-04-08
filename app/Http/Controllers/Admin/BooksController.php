@@ -75,4 +75,15 @@ class BooksController extends Controller
         return redirect('/book')->with('sataus','Book Added Successfuly');
         
     }
+    function delete($id){
+        if(Auth::check()){
+            $book = Books::find($id);
+            $path = "Books/".$book->image;
+            if(File::exists($path)){
+                File::delete($path);
+            }
+            $book->delete();
+            return redirect('/book')->with('status','Book Deleted Successfuly');
+        }
+    }
 }
