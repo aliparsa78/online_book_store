@@ -18,8 +18,10 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Role_as</th>
+                        <th>Change Password</th>
                         <th>Update</th>
                         <th>Delete</th>
+                        
                     </tr>
                     </thead>
                     <tbody>
@@ -30,14 +32,19 @@
                             <td>{{$idNumber++}}</td>
                             <td>{{$item->name}}</td>
                             <td>{{$item->email}}</td>
-                            <td><?php if($item->role_as== 1 ){echo "admin";}else{echo "user";} ?></td>
-                            
+                            <td>
+                                <?php if($item->role_as== 1 ){echo "admin";}else{echo "user";} ?>
+                            </td>
+                            <td>
+                                <a href="{{url('change-password/'.$item->id)}}" class="btn btn-info fa fa-info ">ChangePassword</a>
+                            </td>
                             <td>
                                 <a href="{{url('edite-catagory/'.$item->id)}}" class="btn btn-info fa fa-edit">Update</a>
                             </td>
                             <td>
-                            <a href="{{url('delete-catagory/'.$item->id)}}" class="btn btn-danger fa fa-remove">Remove</a>
+                                <a href="{{url('delete-catagory/'.$item->id)}}" class="btn btn-danger fa fa-remove">Remove</a>
                             </td>
+                            
                         </tr>
                         @endforeach
                     </tbody>

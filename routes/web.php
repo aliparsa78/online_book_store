@@ -26,6 +26,8 @@ Auth::routes();
 Route::middleware(['auth','isAdmin'])->group(function(){
     // Main page of admin part
     Route::get('/user',[AdminController::class,'index']);
+    Route::get('/change-password/{id}',[AdminController::class,'change_password']);
+    Route::post('/change_password/{id}',[AdminController::class,'update_password']);
     Route::get('/',[AdminController::class,'index']);
 
     //Catagory Part 
