@@ -11,7 +11,6 @@
                     <h4 class="text-center">Catagory Table Content</h4>
                 </div>
                 <div class="card-body">
-                    <a href="{{url('register')}}" class="btn btn-info fa fa-user"> Add User</a> <br><br>
                     <table class="table table-bordered table-responsive table-hover p-5">
                     <thead>
                     <tr>

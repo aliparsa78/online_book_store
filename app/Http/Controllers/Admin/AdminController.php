@@ -57,4 +57,5 @@ class AdminController extends Controller
             return redirect('/user')->with('status','User Deleted Successfuly');
         }
     }
+    
 }

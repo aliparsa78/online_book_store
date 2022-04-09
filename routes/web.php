@@ -32,7 +32,7 @@ Route::middleware(['auth','isAdmin'])->group(function(){
     Route::get('/edite-user/{id}',[AdminController::class,'edite_user']);
     Route::post('/update_user/{id}',[AdminController::class,'update_user']);
     Route::get('/delete_user/{id}',[AdminController::class,'delete_user']);
-    Route::get('/register');
+    
     
 
     //Catagory Part 
