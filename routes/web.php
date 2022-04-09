@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CatagoryController;
 use App\Http\Controllers\Admin\BooksController;
+use App\Http\Controllers\Frontend\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,25 +17,23 @@ use App\Http\Controllers\Admin\BooksController;
 |
 */
 
-Route::get('/', function () {
+
+
+// Route::get('/',[ProductController::class,'index']);
+Route::get('/',function(){
     return view('welcome');
 });
-
 Auth::routes();
 
-
-Route::middleware(['auth','isAdmin'])->group(function(){
+Route::middleware(['isAdmin'])->group(function(){
     // Main page of admin part
-    Route::get('/',[AdminController::class,'index']);
-    Route::get('/user',[AdminController::class,'index']);
+    Route::get('admin',[AdminController::class,'index']);
+    Route::get('/user',[AdminController::class,'user']);
     Route::get('/change-password/{id}',[AdminController::class,'change_password']);
     Route::post('/change_password/{id}',[AdminController::class,'update_password']);
     Route::get('/edite-user/{id}',[AdminController::class,'edite_user']);
     Route::post('/update_user/{id}',[AdminController::class,'update_user']);
     Route::get('/delete_user/{id}',[AdminController::class,'delete_user']);
-    
-    
-
     //Catagory Part 
     Route::get('catagories',[CatagoryController::class,'index']);
     Route::get('/add-catagory',[CatagoryController::class,'add_catagory']);
@@ -52,5 +51,5 @@ Route::middleware(['auth','isAdmin'])->group(function(){
 });
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

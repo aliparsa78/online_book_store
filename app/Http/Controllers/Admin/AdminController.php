@@ -13,8 +13,12 @@ class AdminController extends Controller
     function index(){
         if(Auth::check()){
             $user = User::all();
-        return view('admin.Users.index',compact('user'));
+        return view('admin.index',compact('user'));
         }
+    }
+    function user(){
+        $user = User::all();
+        return view('admin.Users.index',compact('user'));
     }
     function change_password($id){
         $user = User::find($id);
