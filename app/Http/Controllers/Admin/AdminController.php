@@ -50,4 +50,11 @@ class AdminController extends Controller
         $user->update();
         return redirect('user')->with('status','User updated successfuly');
     }
+    function delete_user($id){
+        if(Auth::check()){
+            $user = User::find($id);
+            $user->delete();
+            return redirect('/user')->with('status','User Deleted Successfuly');
+        }
+    }
 }
