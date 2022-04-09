@@ -39,7 +39,7 @@
                                 <a href="{{url('change-password/'.$item->id)}}" class="btn btn-info fa fa-info ">ChangePassword</a>
                             </td>
                             <td>
-                                <a href="{{url('edite-catagory/'.$item->id)}}" class="btn btn-info fa fa-edit">Update</a>
+                                <a href="{{url('edite-user/'.$item->id)}}" class="btn btn-info fa fa-edit">Update</a>
                             </td>
                             <td>
                                 <a href="{{url('delete-catagory/'.$item->id)}}" class="btn btn-danger fa fa-remove">Remove</a>

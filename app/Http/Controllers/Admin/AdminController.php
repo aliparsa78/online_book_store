@@ -37,4 +37,17 @@ class AdminController extends Controller
             return "Current password is wrong! ";
         }
     }
+
+    function edite_user($id){
+        $user = User::find($id);
+        return view('admin.Users.edite_user',compact('user'));
+    }
+    function update_user(Request $req,$id){
+        $user = User::find($id);
+        $user->name = $req->input('name');
+        $user->email = $req->input('email');
+        $user->role_as = $req->input('role_as');
+        $user->update();
+        return redirect('user')->with('status','User updated successfuly');
+    }
 }
