@@ -31,5 +31,34 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    <ul id="sign-in">
+      <li>
+        <div class="dropdown">
+        <?php if(Auth::user()){
+            ?>  
+        <button type="button" class="btn btn-primary dropdown-toggle mt-2" data-toggle="dropdown">
+        Profile
+        </button>
+        <div class="dropdown-menu">
+        <a class="dropdown-item"  href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+          {{ __('Logout') }}
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
+          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item" href="#">Link 3</a>
+        </div>
+      </li>
+        <?php }else{ ?>
+          <li>
+            <a href="login"  > sign in</a>
+          </li>
+        <?php  } ?>
+        </div>
+      
+    </ul>
   </div>
 </nav>
