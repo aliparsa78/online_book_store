@@ -8,6 +8,8 @@
         @yield('title')
     </title>
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.theme.default.min.css')}}">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/frontstyle/style.css">
 </head>
@@ -16,12 +18,14 @@
 
     @include('layouts.frontend.carousel')
 
-    @yield('section')
+    @yield('content')
 
     @include('layouts.frontend.footer')
 </body>
 <!-- Scripts -->
 <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script>
-
+<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
+@yield('script')
 </html>
