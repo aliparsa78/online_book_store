@@ -14,6 +14,8 @@
 <body>
     @include('layouts.frontend.navbar')
 
+    @include('layouts.frontend.carousel')
+
     @yield('section')
 
     @include('layouts.frontend.footer')
