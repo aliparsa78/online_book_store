@@ -21,7 +21,7 @@ use App\Http\Controllers\Frontend\ProductController;
 
 // Route::get('/',[ProductController::class,'index']);
 Route::get('/',function(){
-    return view('welcome');
+    return view('frontend.index');
 });
 Auth::routes();
 
